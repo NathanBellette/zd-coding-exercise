@@ -1,0 +1,22 @@
+.row {
+  height: 40px;
+
+  .label,
+  .value {
+    display: flex;
+  }
+
+  .label {
+    width: 75px;
+    color: #bbbbbb;
+  }
+
+  .value {
+    color: #888;
+    font-weight: 600;
+  }
+
+  .value.updated {
+    color: #30aabc;
+  }
+}
