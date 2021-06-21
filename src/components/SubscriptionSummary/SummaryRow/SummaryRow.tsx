@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from 'SummaryRow.module.scss';
+import cx from 'classnames';
+import styles from './SummaryRow.module.scss';
 
 export interface ComponentProps {
     label: string;
@@ -7,11 +8,14 @@ export interface ComponentProps {
     updated?: boolean;
 }
 
-const SummaryRow: React.FC<ComponentProps> = ({ label, value}) => {
+const SummaryRow: React.FC<ComponentProps> = ({ label, value, updated}) => {
     return (
         <div className={styles.row}>
             <p className={styles.label}>{label}</p>
-            <p className={styles.value}>{value}</p>
+            <p className={cx({
+                [styles.value]: true,
+                [styles.updated]: updated
+            })}>{value}</p>
         </div>
     );
 };

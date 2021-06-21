@@ -1,0 +1,27 @@
+.subscription {
+  display: flex;
+  justify-content: center;
+
+  article {
+    background-color: white;
+    padding: 15px;
+    width: 50%;
+
+    .inputRow {
+      display: flex;
+      height: 12rem;
+      width: 100%;
+      justify-content: space-evenly;
+
+      .planSelect {
+        display: block;
+        width: 100px;
+      }
+    }
+
+    .buttonRow {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

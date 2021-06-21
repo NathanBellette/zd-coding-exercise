@@ -1,0 +1,17 @@
+.textDisplay {
+  width: 75px;
+  height: 50px;
+
+  .label {
+    color: #888888;
+    display: block;
+  }
+
+  .value {
+    margin: 0;
+    padding-top: 1px;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+  }
+}

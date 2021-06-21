@@ -8,7 +8,7 @@ export interface ComponentProps {
 
 const SubscriptionSummary: React.FC<ComponentProps> = ({title, children}) => {
     return (
-        <article>
+        <article className={styles.summary}>
             <h4>{title}</h4>
             {children}
         </article>

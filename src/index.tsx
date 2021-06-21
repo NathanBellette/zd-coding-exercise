@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { makeServer } from "./mirage";
+
+const environment = process.env.NODE_ENV;
+
+if (environment !== "production") {
+    makeServer({ environment });
+}
 
 ReactDOM.render(
   <React.StrictMode>

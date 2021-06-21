@@ -1,0 +1,15 @@
+.textField {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    padding: 5px 0;
+    color: #888888;
+  }
+
+  .input {
+    width: 30px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+  }
+}

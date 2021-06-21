@@ -1,10 +1,6 @@
 .row {
   height: 40px;
-
-  .label,
-  .value {
-    display: flex;
-  }
+  display: flex;
 
   .label {
     width: 75px;

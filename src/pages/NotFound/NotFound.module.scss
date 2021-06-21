@@ -1,0 +1,9 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+
+  .message {
+    display: flex;
+    flex-direction: column;
+  }
+}
