@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {Subscription} from '../../interfaces';
-import SubscriptionSummary from '../../components/SubscriptionSummary/SubscriptionSummary';
-import SummaryRow from '../../components/SubscriptionSummary/SummaryRow/SummaryRow';
-import Button from '../../components/Button/Button';
+import {Subscription} from '../../common/interfaces';
+import SubscriptionSummary from '../SubscriptionSummary/SubscriptionSummary';
+import SummaryRow from '../SummaryRow/SummaryRow';
+import Button from '../Button/Button';
 import styles from './SubscriptionConfirmation.module.scss';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+import {useToasts} from "react-toast-notifications";
+import Loading from "../Loading/Loading";
 
 export interface ComponentProps {
     previousSubscription: Subscription | undefined;
@@ -14,13 +16,24 @@ export interface ComponentProps {
 const SubscriptionConfirmation: React.FC<ComponentProps> = ({previousSubscription}) => {
     const [currentSubscription, setCurrentSubscription] = useState<Subscription>();
     const history = useHistory();
+    const [loading, setLoading] = useState<boolean>(false);
+    const {addToast}  = useToasts();
 
     useEffect(() => {
+        setLoading(true);
         axios.get('/api/current/1')
             .then(response => {
-                console.log('current response: ', response.data.subscription);
+                setLoading(false);
                 setCurrentSubscription(response.data.subscription);
-            });
+            })
+            .catch(error => {
+                setLoading(false);
+                addToast(error.message, {
+                    appearance: 'error',
+                    autoDismiss: false
+                });
+            })
+            .finally(() => setLoading(false));
     }, []);
 
     const handleButtonClick = () => {
@@ -33,8 +46,9 @@ const SubscriptionConfirmation: React.FC<ComponentProps> = ({previousSubscriptio
 
     return (
         <section>
+            <Loading loading={loading} />
             <div className={styles.summaries}>
-                <div className={styles.summariesRow}>
+                <div className={styles.summariesColumn}>
                     <SubscriptionSummary title="Previous Subscription">
                         <SummaryRow
                             label="Plan"
@@ -49,7 +63,13 @@ const SubscriptionConfirmation: React.FC<ComponentProps> = ({previousSubscriptio
                             updated={priceUpdated}
                             value={previousSubscription?.cost || 0} />
                     </SubscriptionSummary>
-
+                    <div className={styles.buttonRow}>
+                        <Button disabled={false} onClick={handleButtonClick}>
+                            Back
+                        </Button>
+                    </div>
+                </div>
+                <div className={styles.summariesColumn}>
                     <SubscriptionSummary title="Updated Subscription">
                         <SummaryRow
                             label="Plan"
@@ -64,11 +84,6 @@ const SubscriptionConfirmation: React.FC<ComponentProps> = ({previousSubscriptio
                             updated={priceUpdated}
                             value={currentSubscription?.cost || 0} />
                     </SubscriptionSummary>
-                </div>
-                <div className={styles.buttonRow}>
-                    <Button disabled={false} onClick={handleButtonClick}>
-                        Back
-                    </Button>
                 </div>
             </div>
         </section>

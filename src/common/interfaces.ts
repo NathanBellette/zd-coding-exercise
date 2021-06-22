@@ -9,10 +9,6 @@ export interface Product {
     plans: Plan[]
 }
 
-export interface SubscriptionResponse {
-    subscription: Subscription;
-}
-
 export interface Subscription {
     id: string;
     product: Product;

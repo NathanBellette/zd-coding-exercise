@@ -1,27 +1,45 @@
-.subscription {
+.container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 
-  article {
-    background-color: white;
-    padding: 15px;
+  .subscription {
+    display: flex;
+    flex-direction: column;
     width: 50%;
 
-    .inputRow {
-      display: flex;
-      height: 12rem;
-      width: 100%;
-      justify-content: space-evenly;
+    header {
+      height: 5rem;
+      margin-top: 1rem;
+    }
 
-      .planSelect {
-        display: block;
-        width: 100px;
+    article {
+      background-color: white;
+      padding: 15px;
+
+      .inputRow {
+        display: flex;
+        height: 12rem;
+        width: 100%;
+        margin-top: 3rem;
+        justify-content: space-evenly;
+
+        @media only screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+
+        .planSelect {
+          display: block;
+          width: 100px;
+        }
       }
     }
 
     .buttonRow {
       display: flex;
+      flex-direction: row;
       justify-content: flex-end;
+      margin-top: 1rem;
     }
   }
 }

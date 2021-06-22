@@ -1,12 +1,12 @@
-import {Subscription} from '../interfaces';
+import {Subscription} from './interfaces';
 
-export const shouldEnableUpdate = (previewSubscription: Subscription | undefined, currentSubscription: Subscription | undefined) : boolean => {
-    if(!previewSubscription || !currentSubscription) return false;
-    const hasDifferentSubscriptionCost: boolean = previewSubscription.cost !== currentSubscription.cost;
-    const hasDifferentNumSeats: boolean = previewSubscription.seats !== currentSubscription.seats;
-    const hasDifferentPlan =  previewSubscription.plan.id !== currentSubscription.plan.id;
+export const shouldDisableUpdate = (previewSubscription: Subscription | undefined, currentSubscription: Subscription | undefined) : boolean => {
+    if(!previewSubscription || !currentSubscription) return true;
+    const hasSameSubscriptionCost: boolean = previewSubscription.cost === currentSubscription.cost;
+    const hasSameNumSeats: boolean = previewSubscription.seats === currentSubscription.seats;
+    const hasSamePlan =  previewSubscription.plan.id === currentSubscription.plan.id;
 
-    return hasDifferentSubscriptionCost || hasDifferentNumSeats || hasDifferentPlan;
+    return hasSameSubscriptionCost && hasSameNumSeats && hasSamePlan;
 }
 
 export const calculateSubscriptionCost = (costPerSeat: number, numSeats: number) => costPerSeat * numSeats;

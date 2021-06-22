@@ -1,49 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextField /> should render correctly 1`] = `
+exports[`<ErrorBoundary /> renders the component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="textField"
-      >
-        <input
-          aria-label="text-field"
-          class="input"
-          data-testid="text-input-field"
-          id="test1"
-          name="testName"
-          value="10"
-        />
-        <label
-          class="label"
-          for="test1"
-        >
-          Test label
-        </label>
-      </div>
+      <p>
+        Test
+      </p>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="textField"
-    >
-      <input
-        aria-label="text-field"
-        class="input"
-        data-testid="text-input-field"
-        id="test1"
-        name="testName"
-        value="10"
-      />
-      <label
-        class="label"
-        for="test1"
-      >
-        Test label
-      </label>
-    </div>
+    <p>
+      Test
+    </p>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

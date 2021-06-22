@@ -1,6 +1,6 @@
 import React from 'react';
-import {calculateSubscriptionCost, shouldEnableUpdate} from './helpers';
-import {Subscription} from '../interfaces';
+import {calculateSubscriptionCost, shouldDisableUpdate} from './helpers';
+import {Subscription} from './interfaces';
 import {plans, subscriptions} from '../mocks/mockData';
 
 describe('calculateSubscriptionCost', () => {
@@ -16,7 +16,7 @@ describe('shouldEnableUpdate', () => {
        const previewSubscription: Subscription = {
            ...currentSubscription
        };
-       const result = shouldEnableUpdate(previewSubscription, currentSubscription);
+       const result = shouldDisableUpdate(previewSubscription, currentSubscription);
        expect(result).toBe(false);
     });
 
@@ -26,7 +26,7 @@ describe('shouldEnableUpdate', () => {
             ...currentSubscription,
             plan: plans[2]
         };
-        const result = shouldEnableUpdate(previewSubscription, currentSubscription);
+        const result = shouldDisableUpdate(previewSubscription, currentSubscription);
         expect(result).toBe(true);
     });
 
@@ -36,7 +36,7 @@ describe('shouldEnableUpdate', () => {
             ...currentSubscription,
             seats: 100
         };
-        const result = shouldEnableUpdate(previewSubscription, currentSubscription);
+        const result = shouldDisableUpdate(previewSubscription, currentSubscription);
         expect(result).toBe(true);
     });
 
@@ -46,7 +46,7 @@ describe('shouldEnableUpdate', () => {
             ...currentSubscription,
             cost: 50000
         };
-        const result = shouldEnableUpdate(previewSubscription, currentSubscription);
+        const result = shouldDisableUpdate(previewSubscription, currentSubscription);
         expect(result).toBe(true);
     });
 });

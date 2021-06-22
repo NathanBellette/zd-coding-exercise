@@ -1,6 +1,8 @@
+@import 'src/styles/globals.module';
+
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 14px;
-  color: #444444;
-  background-color: #f8f8f8;
+  color: $dark-dark-grey-color;
+  background-color: $off-white-color;
 }

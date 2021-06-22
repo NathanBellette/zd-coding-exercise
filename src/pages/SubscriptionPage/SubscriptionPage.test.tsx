@@ -12,7 +12,7 @@ describe('<SubscriptionPage />', () => {
    };
 
    it('renders the component', () => {
-      const container = render(<SubscriptionPage {...defaultProps} />);
+      const { container } = render(<SubscriptionPage {...defaultProps} />);
       expect(container).toMatchSnapshot();
    });
 });

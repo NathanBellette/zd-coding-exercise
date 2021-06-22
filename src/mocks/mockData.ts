@@ -1,4 +1,4 @@
-import {Plan, Product, Subscription} from '../interfaces';
+import {Plan, Product, Subscription} from '../common/interfaces';
 
 export const plans: Plan[] = [
     {

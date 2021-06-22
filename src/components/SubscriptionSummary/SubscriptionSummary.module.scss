@@ -1,5 +1,16 @@
 .summary {
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 32rem;
+  height: 32rem;
   background-color: white;
   padding: 25px 0 30px 40px;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+  }
 }

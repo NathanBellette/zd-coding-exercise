@@ -12,7 +12,7 @@ export interface ComponentProps {
 const TextField: React.FC<ComponentProps> = ({id, name, label, value, onChange}) => {
     return (
         <div className={styles.textField}>
-            <input className={styles.input} id={id} name={name} value={value} onChange={onChange} aria-label="text-field" />
+            <input className={styles.input} id={id} data-testid="text-input-field" name={name} value={value} onChange={onChange} aria-label="text-field" />
             <label className={styles.label} htmlFor={id}>{label}</label>
         </div>
     );

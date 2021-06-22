@@ -1,0 +1,22 @@
+@import '../../styles/globals.module';
+
+.row {
+  height: 4rem;
+  display: flex;
+  font-size: 1.5rem;
+
+  .label {
+    width: 7.5rem;
+    color: $light-grey-color;
+  }
+
+  .value {
+    color: $dark-grey-color;
+    font-weight: 600;
+    padding-left: 9rem;
+  }
+
+  .value.updated {
+    color: $blue-color;
+  }
+}
