@@ -11,42 +11,42 @@ describe('calculateSubscriptionCost', () => {
 });
 
 describe('shouldEnableUpdate', () => {
-    it('should return false when previewSubscription and currentSubscription have the same values', () => {
+    it('should return true when previewSubscription and currentSubscription have the same values', () => {
        const currentSubscription: Subscription = subscriptions[0];
        const previewSubscription: Subscription = {
            ...currentSubscription
        };
        const result = shouldDisableUpdate(previewSubscription, currentSubscription);
-       expect(result).toBe(false);
+       expect(result).toBe(true);
     });
 
-    it('should return true when previewSubscription and current subscriptions have different plans', () => {
+    it('should return false when previewSubscription and current subscriptions have different plans', () => {
         const currentSubscription: Subscription = subscriptions[0];
         const previewSubscription: Subscription = {
             ...currentSubscription,
             plan: plans[2]
         };
         const result = shouldDisableUpdate(previewSubscription, currentSubscription);
-        expect(result).toBe(true);
+        expect(result).toBe(false);
     });
 
-    it('should return true when previewSubscription and current subscriptions have different number of seats', () => {
+    it('should return false when previewSubscription and current subscriptions have different number of seats', () => {
         const currentSubscription: Subscription = subscriptions[0];
         const previewSubscription: Subscription = {
             ...currentSubscription,
             seats: 100
         };
         const result = shouldDisableUpdate(previewSubscription, currentSubscription);
-        expect(result).toBe(true);
+        expect(result).toBe(false);
     });
 
-    it('should return true when previewSubscription and current subscriptions have different total price', () => {
+    it('should return false when previewSubscription and current subscriptions have different total price', () => {
         const currentSubscription: Subscription = subscriptions[0];
         const previewSubscription: Subscription = {
             ...currentSubscription,
             cost: 50000
         };
         const result = shouldDisableUpdate(previewSubscription, currentSubscription);
-        expect(result).toBe(true);
+        expect(result).toBe(false);
     });
 });

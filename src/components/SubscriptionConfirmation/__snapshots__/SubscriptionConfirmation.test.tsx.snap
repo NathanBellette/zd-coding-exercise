@@ -7,17 +7,34 @@ Object {
     <div>
       <section>
         <div
+          class="loading"
+        >
+          <span
+            class="css-1xdhyk6"
+          >
+            <span
+              class="css-1puqkdb"
+            />
+            <span
+              class="css-10y34i5"
+            />
+            <span
+              class="css-1puqkdb"
+            />
+          </span>
+        </div>
+        <div
           class="summaries"
         >
           <div
-            class="summariesRow"
+            class="summariesColumn"
           >
             <article
               class="summary"
             >
-              <h4>
+              <h2>
                 Previous Subscription
-              </h4>
+              </h2>
               <div
                 class="row"
               >
@@ -61,12 +78,25 @@ Object {
                 </p>
               </div>
             </article>
+            <div
+              class="buttonRow"
+            >
+              <button
+                class="button"
+              >
+                Back
+              </button>
+            </div>
+          </div>
+          <div
+            class="summariesColumn"
+          >
             <article
               class="summary"
             >
-              <h4>
+              <h2>
                 Updated Subscription
-              </h4>
+              </h2>
               <div
                 class="row"
               >
@@ -109,33 +139,44 @@ Object {
               </div>
             </article>
           </div>
-          <div
-            class="buttonRow"
-          >
-            <button
-              class="button"
-            >
-              Back
-            </button>
-          </div>
         </div>
       </section>
     </div>
+    <div
+      class="react-toast-notifications__container css-19n335a-ToastContainer"
+    />
   </body>,
   "container": <div>
     <section>
       <div
+        class="loading"
+      >
+        <span
+          class="css-1xdhyk6"
+        >
+          <span
+            class="css-1puqkdb"
+          />
+          <span
+            class="css-10y34i5"
+          />
+          <span
+            class="css-1puqkdb"
+          />
+        </span>
+      </div>
+      <div
         class="summaries"
       >
         <div
-          class="summariesRow"
+          class="summariesColumn"
         >
           <article
             class="summary"
           >
-            <h4>
+            <h2>
               Previous Subscription
-            </h4>
+            </h2>
             <div
               class="row"
             >
@@ -179,12 +220,25 @@ Object {
               </p>
             </div>
           </article>
+          <div
+            class="buttonRow"
+          >
+            <button
+              class="button"
+            >
+              Back
+            </button>
+          </div>
+        </div>
+        <div
+          class="summariesColumn"
+        >
           <article
             class="summary"
           >
-            <h4>
+            <h2>
               Updated Subscription
-            </h4>
+            </h2>
             <div
               class="row"
             >
@@ -226,15 +280,6 @@ Object {
               </p>
             </div>
           </article>
-        </div>
-        <div
-          class="buttonRow"
-        >
-          <button
-            class="button"
-          >
-            Back
-          </button>
         </div>
       </div>
     </section>

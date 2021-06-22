@@ -4,45 +4,9 @@ exports[`<ErrorBoundary /> renders the component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="loading"
-      >
-        <span
-          class="css-1xdhyk6"
-        >
-          <span
-            class="css-1puqkdb"
-          />
-          <span
-            class="css-10y34i5"
-          />
-          <span
-            class="css-1puqkdb"
-          />
-        </span>
-      </div>
-    </div>
+    <div />
   </body>,
-  "container": <div>
-    <div
-      class="loading"
-    >
-      <span
-        class="css-1xdhyk6"
-      >
-        <span
-          class="css-1puqkdb"
-        />
-        <span
-          class="css-10y34i5"
-        />
-        <span
-          class="css-1puqkdb"
-        />
-      </span>
-    </div>
-  </div>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],

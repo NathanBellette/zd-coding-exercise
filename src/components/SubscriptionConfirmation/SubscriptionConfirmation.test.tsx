@@ -2,6 +2,7 @@ import React from 'react';
 import {render} from '@testing-library/react';
 import SubscripionConfirmation, {ComponentProps} from './SubscripionConfirmation';
 import {subscriptions} from '../../mocks/mockData';
+import {ToastProvider} from "react-toast-notifications";
 
 describe('<SubscriptionConfirmation />', () => {
     const defaultProps: ComponentProps = {
@@ -9,7 +10,7 @@ describe('<SubscriptionConfirmation />', () => {
     };
 
     it('renders the component', () => {
-        const container = render(<SubscripionConfirmation {...defaultProps} />);
+        const container = render(<ToastProvider><SubscripionConfirmation {...defaultProps} /></ToastProvider>);
         expect(container).toMatchSnapshot();
     });
-});
+})
