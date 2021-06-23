@@ -1,6 +1,6 @@
 # Getting Started 
 
-## Request global NPM dependencies
+## Required global NPM dependencies
 ### npm (required)
 - https://www.npmjs.com/get-npm
 ### node-sass (required)
