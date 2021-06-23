@@ -23,7 +23,7 @@ export const plans: Plan[] = [
     }
 ];
 
-const products: Product[] = [
+export const products: Product[] = [
     {
         id: '1',
         plans: plans

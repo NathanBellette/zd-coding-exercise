@@ -118,6 +118,7 @@ exports[`<SubscriptionPage /> renders the component 1`] = `
               data-testid="text-input-field"
               id="numSeats"
               name="numSeats"
+              type="text"
               value="5"
             />
             <label

@@ -14,6 +14,7 @@ Object {
           data-testid="text-input-field"
           id="test1"
           name="testName"
+          type="text"
           value="10"
         />
         <label
@@ -35,6 +36,7 @@ Object {
         data-testid="text-input-field"
         id="test1"
         name="testName"
+        type="text"
         value="10"
       />
       <label
