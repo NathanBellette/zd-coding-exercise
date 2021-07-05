@@ -15,6 +15,7 @@
     "@types/react-select": "^4.0.15",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
+    "formik": "^2.2.9",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,7 +25,8 @@
     "react-spinners": "^0.11.0",
     "react-toast-notifications": "^2.4.4",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

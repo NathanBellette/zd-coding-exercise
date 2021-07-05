@@ -1,6 +1,6 @@
 import {Subscription} from './interfaces';
 
-export const shouldDisableUpdate = (previewSubscription: Subscription | undefined, currentSubscription: Subscription | undefined) : boolean => {
+export const isPlanUnchanged = (previewSubscription: Subscription | undefined, currentSubscription: Subscription | undefined) : boolean => {
     if(!previewSubscription || !currentSubscription) return true;
     const hasSameSubscriptionCost: boolean = previewSubscription.cost === currentSubscription.cost;
     const hasSameNumSeats: boolean = previewSubscription.seats === currentSubscription.seats;

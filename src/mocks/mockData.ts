@@ -26,7 +26,8 @@ export const plans: Plan[] = [
 export const products: Product[] = [
     {
         id: '1',
-        plans: plans
+        plans: plans,
+        seats: 100
     }
 ]
 

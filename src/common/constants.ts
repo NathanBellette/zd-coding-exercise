@@ -1,0 +1,1 @@
+export const INVALID_SEATS_ERROR_MESSAGE:string = 'Number of seats not supported';

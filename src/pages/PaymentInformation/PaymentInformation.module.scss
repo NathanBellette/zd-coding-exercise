@@ -1,0 +1,35 @@
+.paymentInformation {
+
+  h2 {
+    text-align: center;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .formColumn {
+      display: flex;
+      flex-direction: column;
+
+      .formRow {
+        display: flex;
+        flex-direction: row;
+
+        .cardHolder,
+        .cardNumber,
+        {
+          width: 15rem;
+        }
+
+        .cardExpiryMonth,
+        .cardExpiryYear,
+        {
+          width: 3rem;
+        }
+      }
+    }
+  }
+}
+

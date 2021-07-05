@@ -6,7 +6,8 @@ export interface Plan {
 
 export interface Product {
     id: string;
-    plans: Plan[]
+    plans: Plan[];
+    seats: number;
 }
 
 export interface Subscription {

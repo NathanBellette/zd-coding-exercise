@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { makeServer } from "./mirage";
+import {SubscriptionProvider} from "./context/SubscriptionContext";
 
 const environment = process.env.NODE_ENV;
 
@@ -13,7 +14,9 @@ if (environment !== "production") {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <SubscriptionProvider>
+          <App />
+      </SubscriptionProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

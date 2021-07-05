@@ -1,0 +1,52 @@
+.contactInformation {
+
+  h2 {
+    text-align: center;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .formColumn {
+      display: flex;
+      flex-direction: column;
+
+      .errors {
+        color: red;
+      }
+
+      .formRow {
+        display: flex;
+        flex-direction: row;
+
+        .firstName,
+        .lastName,
+        {
+          width: 12rem;
+        }
+
+        .firstName,
+        .suburb {
+          margin-right: 1rem;
+        }
+
+        .streetAddress {
+          width: 24rem;
+        }
+
+        .suburb {
+          width: 12rem;
+        }
+
+        .state,
+        .postcode,
+        {
+          width: 3rem;
+        }
+      }
+    }
+  }
+}
+
