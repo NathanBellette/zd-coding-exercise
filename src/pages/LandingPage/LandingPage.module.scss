@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .subscription {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    header {
+      height: 5rem;
+      margin-top: 1rem;
+    }
+
+    article {
+      background-color: white;
+      padding: 15px;
+
+      .inputRow {
+        display: flex;
+        height: 12rem;
+        width: 100%;
+        margin-top: 3rem;
+        justify-content: space-evenly;
+
+        @media only screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+
+        .planSelect {
+          display: block;
+          width: 100px;
+        }
+
+        .subscriptions {
+          width: 300px;
+          display: flex;
+        }
+
+        .subscriptions > div {
+          width: 50px;
+          height: 50px;
+          border: 3px solid #444444;
+          border-radius: 10px;
+          text-align: center;
+          line-height: 45px;
+          cursor: pointer;
+          margin: 0 10px 0px 10px;
+          font-size: 20px;
+
+          &:hover {
+            background: #444444;
+            color: white;
+          }
+        }
+
+        .total {
+          font-size: 20px;
+          font-weight: 900;
+        }
+      }
+    }
+
+    .buttonRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+  }
+}

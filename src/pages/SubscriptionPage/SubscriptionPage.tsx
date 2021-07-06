@@ -7,7 +7,7 @@ import TextFieldDisplay from '../../components/TextFieldDisplay/TextFieldDisplay
 import Button from '../../components/Button/Button';
 import styles from './SubscriptionPage.module.scss';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import {shouldDisableUpdate} from '../../common/helpers';
 import Loading from "../../components/Loading/Loading";
 
@@ -23,6 +23,10 @@ const SubscriptionPage: React.FC<ComponentProps> = ({
                                                         previewSubscription,
                                                         setPreviewSubscription,
                                                         setCurrentSubscription}) => {
+    type Params = {
+      id: string;
+    };
+    const {id} = useParams<Params>();
     const history = useHistory();
     const [loading, setLoading] = useState<boolean>(false);
     const {addToast}  = useToasts();

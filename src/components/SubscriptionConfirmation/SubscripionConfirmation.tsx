@@ -4,7 +4,7 @@ import SubscriptionSummary from '../SubscriptionSummary/SubscriptionSummary';
 import SummaryRow from '../SummaryRow/SummaryRow';
 import Button from '../Button/Button';
 import styles from './SubscriptionConfirmation.module.scss';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import axios from 'axios';
 import {useToasts} from "react-toast-notifications";
 import Loading from "../Loading/Loading";
@@ -14,6 +14,10 @@ export interface ComponentProps {
 }
 
 const SubscriptionConfirmation: React.FC<ComponentProps> = ({previousSubscription}) => {
+    type Params = {
+      id: string;
+    };
+    const {id} = useParams<Params>();
     const [currentSubscription, setCurrentSubscription] = useState<Subscription>();
     const history = useHistory();
     const [loading, setLoading] = useState<boolean>(false);

@@ -37,5 +37,19 @@ export const subscriptions: Subscription[] = [
         plan: plans[0],
         seats: 5,
         cost: 5
+    },
+    {
+        id: '2',
+        product: products[0],
+        plan: plans[1],
+        seats: 2,
+        cost: 20
+    },
+    {
+        id: '3',
+        product: products[0],
+        plan: plans[2],
+        seats: 1,
+        cost: 100
     }
 ];

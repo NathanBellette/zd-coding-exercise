@@ -15,10 +15,15 @@ export function makeServer({ environment = "development" }) {
             })
         },
         seeds: (server) => {
-          server.create('subscription', subscriptions[0])
+          subscriptions.forEach((subscription) => {
+            server.create('subscription', subscription)
+          });
         },
         routes() {
             this.namespace = 'api';
+            this.get('/subscriptions', (schema, request) => {
+              return subscriptions;
+            });
             this.get('/current/:id', (schema, request) => {
                 const id = request.params.id;
                 return schema.subscriptions.find(id);
